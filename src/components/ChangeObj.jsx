@@ -11,11 +11,7 @@ export default function ChangeObj({ objArr }) {
       </div>
       <button
         onClick={() => {
-          if (num < objArr.length - 1) {
-            setNum((curr) => curr + 1);
-          } else {
-            setNum(0);
-          }
+          num < objArr.length - 1 ? setNum((curr) => curr + 1) : setNum(0);
         }}
       >
         프로필 변경하기
