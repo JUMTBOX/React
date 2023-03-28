@@ -1,12 +1,10 @@
 import "./App.css";
-import StateAndVariable from "./components/StateAndVariable";
-// import State from "./components/State";
-// import Ex3 from "./components/Ex3";
+import Ex5 from "./components/Ex5";
 
 function App() {
   return (
     <div className="App">
-      <StateAndVariable />
+      <Ex5></Ex5>
     </div>
   );
 }
