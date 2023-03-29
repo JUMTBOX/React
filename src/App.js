@@ -1,10 +1,10 @@
-import "./App.css";
-import Ex5 from "./components/Ex5";
+import './App.css';
+import ReactFragment from './components/ReactFragment';
 
 function App() {
   return (
     <div className="App">
-      <Ex5></Ex5>
+      <ReactFragment />
     </div>
   );
 }
