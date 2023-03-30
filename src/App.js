@@ -1,10 +1,11 @@
 import './App.css';
-import ReactFragment from './components/ReactFragment';
+
+import UseEffectFetch from './components/UseEffectFetch';
 
 function App() {
   return (
     <div className="App">
-      <ReactFragment />
+      <UseEffectFetch />
     </div>
   );
 }
