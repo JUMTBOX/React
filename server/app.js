@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`THE SERVER IS OPENED AT PORT ${PORT}`);
+  console.log(`THE SERVER IS OPEN AT PORT ${PORT}`);
 });

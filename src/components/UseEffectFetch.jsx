@@ -5,9 +5,17 @@ export default function UseEffectFetch() {
   const [dataArr, setDataArr] = useState([]);
 
   const fetchData = async () => {
-    const res = await fetch('http://localhost:4000/');
+    const res = await fetch('http://localhost:4000/', {
+      method: 'get',
+      headers: {
+        'Content-type': 'application/json',
+      },
+    });
+
+    if (res.status !== 200) return 'SOMETHING WENT WRONG...!';
+
     const data = await res.json();
-    setDataArr(data);
+    setDataArr((cur) => data);
     console.log(dataArr);
   };
 
@@ -23,7 +31,7 @@ export default function UseEffectFetch() {
             key={item.name}
             name={item.name}
             age={item.age}
-            nickname={item.nickName}
+            nickName={item.nickName}
           />
         );
       })}
