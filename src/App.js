@@ -1,33 +1,52 @@
 import './App.css';
-import styled, { keyframes } from 'styled-components';
-import logo from './logo.svg';
+import FancyBorder from './components/FancyBorder';
+import ImgComponents from './components/ImgComponents';
 
-const rotate = keyframes`
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  `;
-const Container = styled('div')`
-  background-color: black;
-`;
-const AppHeader = styled('header')`
-  width: 100%;
-`;
-const CustomImg = styled('img')`
-  width: 60%;
-  animation: ${rotate} 5s 3s infinite linear;
-`;
-const CustomAnchor = styled('a')`
-  text-decoration: none;
-  font-size: 1.5rem;
-`;
+// import styled, { keyframes } from 'styled-components';
+// import logo from './logo.svg';
+
+import TestScss from './components/TestScss';
 
 function App() {
   return (
-    <Container className="App">
+    <div className="App">
+      <FancyBorder color="blue">
+        <h1>props.children</h1>
+        <p>이건 매우 유용한 기술입니다.</p>
+        <ImgComponents />
+      </FancyBorder>
+    </div>
+  );
+}
+
+export default App;
+
+// const rotate = keyframes`
+//     from {
+//       transform: rotate(0deg);
+//     }
+//     to {
+//       transform: rotate(360deg);
+//     }
+//   `;
+// const Container = styled('div')`
+//   background-color: black;
+//   overflow-y: hidden;
+// `;
+// const AppHeader = styled('header')`
+//   width: 100%;
+// `;
+// const CustomImg = styled('img')`
+//   width: 60%;
+//   animation: ${rotate} 5s 3s infinite linear;
+// `;
+// const CustomAnchor = styled('a')`
+//   text-decoration: none;
+//   font-size: 1.5rem;
+// `;
+
+{
+  /* <Container className="App">
       <AppHeader className="App-header">
         <CustomImg src={logo} className="App-logo" alt="logo" active />
         <p>
@@ -42,8 +61,5 @@ function App() {
           Learn React
         </CustomAnchor>
       </AppHeader>
-    </Container>
-  );
+    </Container> */
 }
-
-export default App;
